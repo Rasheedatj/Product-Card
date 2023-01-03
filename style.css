@@ -1,0 +1,168 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap'); 
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ :root{
+    --text:#658499;
+ }
+
+ body{
+    background:linear-gradient(#003355, #003355 50%, #fff8f3 50%, #fff8f3 100%) ;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+ }
+
+ .card{
+    display: flex;
+    width: 30%;
+    position: relative;
+    cursor: pointer;
+    height: 70vh;
+ }
+
+
+ .card .shoe{
+    background-color: #fff8f3; 
+    width: 100%;
+    height: 70vh;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.220);
+    transition: all 500ms ease;
+    z-index: 2;
+    overflow: hidden;
+ }
+
+ .card:hover .shoe{
+   transform: translateX(-45%);
+   border-top-right-radius: 0;
+   border-bottom-right-radius: 0;
+
+ }
+
+ .shoe img{
+    width: 80%;
+    transition: transform 500ms ease;
+ }
+
+ .card:hover img{
+    transform: rotate(-30deg) translate(-20px,-50px);
+    cursor: pointer;
+ }
+
+ .card .description{
+    background-color: #003355;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.220);
+    width: 100%;
+    height: 70vh;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 15px;
+    padding: 2.4rem 3rem 2rem 2rem; 
+    position: absolute;
+    z-index: -1;
+    transition: transform 500ms ease;
+    border-bottom-left-radius: 15px;
+ }
+
+ .card .description::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff8f3;
+    left: 0;
+    top: 50%;
+    bottom: 50%;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(90deg);
+ }
+
+ .card:hover .description{
+    transform: translateX(55%);
+    z-index: 1;
+    border-bottom-left-radius: 0;
+ }
+
+
+ .description :is(h1,h2,h3,.amt){
+    text-transform: uppercase;
+    color: #fff;
+ }
+
+ .description h2{
+    font-size: 1.2rem;
+ }
+
+ .name{
+    color:var(--text) ;
+    padding: .4rem 0 1.5rem 0;
+ }
+
+ .details{
+    color:var(--text) ;
+   padding: .3rem 0 1.5rem 0; 
+ }
+
+ .sizes{
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .sizes p{
+    border: 2px solid #fff;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+    color: var(--text);
+    margin-top: 10px;
+ }
+
+ .sizes p:hover{
+    background-color: rgb(235, 235, 235);
+ }
+
+ .price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+ }
+
+ .price p{
+    font-weight: 600;
+    font-size: 1.5rem;
+ }
+ .price span{
+    font-size: .8rem;
+ }
+
+ .price button{
+    text-transform: capitalize;
+    background-color: #fff;
+    background-repeat: 10px;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: #003355;
+    font-weight: 600;
+    transition: 200ms ease;
+    border: 2px solid #003355;
+ }
+
+ button:hover{
+    background-color: #003355;
+    color: #fff;
+   cursor: pointer;
+   border: 2px solid #fff8f3;
+   border-radius: 10px;
+ }
+
